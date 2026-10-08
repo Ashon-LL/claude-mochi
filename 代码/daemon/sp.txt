@@ -1,0 +1,1 @@
+settings_patch selftest OK

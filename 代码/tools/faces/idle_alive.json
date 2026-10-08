@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "id": "idle_alive",
+  "name": "idle_alive_blink_gaze",
+  "bg": "#DA1100",
+  "layers": [
+    { "type": "rect", "x": 62,  "y": 70, "w": 28, "h": 46, "color": "#000000" },
+    { "type": "rect", "x": 150, "y": 70, "w": 28, "h": 46, "color": "#000000" },
+
+    { "type": "rect", "x": 72,  "y": 84, "w": 8, "h": 8, "color": "#FFFFFF",
+      "effect": 3, "period_ms": 1200, "amount": 7 },
+    { "type": "rect", "x": 160, "y": 84, "w": 8, "h": 8, "color": "#FFFFFF",
+      "effect": 3, "period_ms": 1200, "amount": 7 },
+
+    { "type": "rect", "x": 62,  "y": 70, "w": 28, "h": 46, "color": "#DA1100",
+      "effect": 1, "period_ms": 4600, "on_ms": 170 },
+    { "type": "rect", "x": 150, "y": 70, "w": 28, "h": 46, "color": "#DA1100",
+      "effect": 1, "period_ms": 4600, "on_ms": 170 },
+
+    { "type": "poly", "color": "#000000", "points": [[96, 156], [120, 166], [144, 156]] }
+  ],
+  "anim": { "fps": 10, "loop": true }
+}

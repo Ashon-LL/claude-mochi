@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>cchud-hook</AssemblyName>
+    <RootNamespace>CchudHook</RootNamespace>
+
+    <!-- Native AOT: a single native exe with no runtime dependency and
+         single-digit-millisecond startup. The Python shim this replaces costs
+         1.11 ms once running, and that is the bar to beat. -->
+    <PublishAot>true</PublishAot>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+
+    <!-- Size and startup: strip debug info. -->
+    <StripSymbols>true</StripSymbols>
+    <DebugType>none</DebugType>
+
+    <!-- No PublishSingleFile: .NET 8 rejects it together with PublishAot.
+         NativeAOT already emits one self-contained native exe, so there is
+         nothing for single-file packaging to add. -->
+
+    <!-- Invariant mode removes the ICU data blob (several MB) from the binary.
+         The shim does no culture-aware formatting, so it is pure waste here. -->
+    <InvariantGlobalization>true</InvariantGlobalization>
+
+    <!-- Trim aggressively; the shim touches almost none of the framework. -->
+    <PublishTrimmed>true</PublishTrimmed>
+    <TrimMode>full</TrimMode>
+  </PropertyGroup>
+
+</Project>

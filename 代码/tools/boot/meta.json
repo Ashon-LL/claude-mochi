@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "duration_ms": 1600,
+  "hold_ms": 1200,
+  "loop": false,
+  "bg": "#DA1100",
+  "color": "#FFFFFF",
+  "segments": 162,
+  "triangles": 162
+}

@@ -1,0 +1,22 @@
+# 依赖
+node_modules/
+
+# Electron 构建产物
+electron/dist/
+electron/release/
+
+# PyInstaller 构建产物
+代码/dist/
+代码/build_pyi/
+
+# C# 构建产物
+代码/hookshim/cchud-hook-cs/bin/
+代码/hookshim/cchud-hook-cs/obj/
+
+# 日志
+*.log
+electron/mainlog.txt
+
+# 工作区配置
+.workbuddy/
+.zcode/
